@@ -4,6 +4,7 @@ on:
   push:
     branches: [remote]
   pull_request:
+  workflow_dispatch:
 
 jobs:
   check:
