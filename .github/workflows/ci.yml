@@ -1,0 +1,14 @@
+name: CI
+
+on:
+  push:
+    branches: [remote]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Izgradi i provjeri kviz
+        run: make check

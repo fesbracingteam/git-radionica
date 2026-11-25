@@ -1,0 +1,1 @@
+stara datoteka sudionika P02 — obriši me s git rm

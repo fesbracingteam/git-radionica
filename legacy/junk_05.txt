@@ -1,0 +1,1 @@
+stara datoteka sudionika P05 — obriši me s git rm

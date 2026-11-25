@@ -1,0 +1,1 @@
+stara datoteka sudionika P11 — obriši me s git rm

@@ -1,0 +1,1 @@
+stara datoteka sudionika P08 — obriši me s git rm

@@ -1,0 +1,1 @@
+stara datoteka sudionika P13 — obriši me s git rm

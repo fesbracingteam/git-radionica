@@ -1,0 +1,1 @@
+stara datoteka sudionika P19 — obriši me s git rm
