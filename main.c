@@ -84,6 +84,6 @@ int main(int argc, char **argv) {
     for (int i = 0; i < n; i++)
         if (izbor == 0 || izbor == i + 1) igraj(registry[i], &tocno, &ukupno);
 
-    if (ukupno > 0) printf("\nRezultat: %d/%d (%d%%)\n", tocno, ukupno, tocno / ukupno * 100);
+    if (ukupno > 0) printf("\nRezultat: %d/%d (%d%%)\n", tocno, ukupno, 100 * tocno / ukupno);
     return 0;
 }
