@@ -13,7 +13,7 @@ Mali kviz u C-u na kojem vježbamo Git. Svatko od 19 sudionika dodaje svoju temu
 3. Prijavi se: `gh auth login`, pa provjeri s `gh auth status`.
 4. Prihvati pozivnicu za repozitorij, zatim:
    ```bash
-   gh repo clone domeepc/git-radionica
+   gh repo clone fesbracingteam/git-radionica
    cd git-radionica
    make check
    ```

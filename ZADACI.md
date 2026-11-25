@@ -10,7 +10,7 @@ Radiš na svojoj grani. Danas nitko ništa ne spaja.
 
 1. Kloniraj repozitorij i pokreni kviz:
    ```bash
-   gh repo clone domeepc/git-radionica
+   gh repo clone fesbracingteam/git-radionica
    cd git-radionica
    make run
    ```
