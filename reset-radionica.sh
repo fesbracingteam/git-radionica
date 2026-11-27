@@ -1,5 +1,6 @@
 #!/bin/bash
-# SAMO ZA VODITELJA. Vraća fesbracingteam/git-radionica u početno stanje:
+# SAMO ZA VODITELJA. Vraća repozitorij na koji pokazuje origin u početno stanje
+# (ime repozitorija pita GitHub, pa radi i nakon premještanja repozitorija):
 #   - zatvara sve otvorene PR-ove
 #   - briše sve grane na GitHubu osim remote, develop, staging, hotfix
 #   - vraća te četiri grane na početne commitove (force push)
@@ -11,10 +12,10 @@
 # Pokreni iz klona:  ./reset-radionica.sh
 set -euo pipefail
 
-REPO=fesbracingteam/git-radionica
 GRANE="remote develop staging hotfix"
 
 cd "$(dirname "$0")"
+REPO=$(gh repo view --json nameWithOwner -q .nameWithOwner)
 if [ -n "$(git status --porcelain --untracked-files=no)" ]; then
     echo "Lokalni klon ima nespremljene promjene. Spremi ih ili ih odbaci, pa pokreni ponovno."
     exit 1
