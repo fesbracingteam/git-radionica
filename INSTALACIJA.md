@@ -41,6 +41,20 @@ Sve naredbe na radionici upisuješ u Ubuntu terminal. PATH se ne mijenja.
 
 ### Mogućnost 2: Windows bez WSL-a (MSYS2 + Git for Windows)
 
+0. **Provjeri imaš li `winget`.** U PowerShellu:
+   ```powershell
+   winget --version
+   ```
+   Ako ispiše verziju, idi na korak 1. Ako piše da `winget` nije prepoznat, instaliraj ga na jedan od ovih načina pa otvori novi PowerShell i ponovno provjeri `winget --version`:
+   - **Ponovno registriraj** (winget je na Windowsima 10 i 11 obično već tu, samo nije aktiviran):
+     ```powershell
+     Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe
+     ```
+   - **Ako to ne pomogne** — u PowerShellu pokrenutom kao administrator:
+     ```powershell
+     Install-PackageProvider -Name NuGet -Force; Install-Module -Name Microsoft.WinGet.Client -Force -Repository PSGallery; Repair-WinGetPackageManager -AllUsers
+     ```
+   - **Ili preko Microsoft Storea:** otvori Microsoft Store, potraži **App Installer** i klikni **Instaliraj** (ili **Ažuriraj**).
 1. U PowerShellu instaliraj MSYS2, Git i GitHub CLI:
    ```powershell
    winget install -e --id MSYS2.MSYS2; winget install -e --id Git.Git; winget install -e --id GitHub.cli
