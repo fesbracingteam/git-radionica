@@ -5,6 +5,8 @@
 #   - vraća te četiri grane na početne commitove (force push)
 #   - u ovom lokalnom klonu vraća iste četiri grane
 # Početni commitovi su tagovi pocetno-remote, pocetno-develop, pocetno-staging, pocetno-hotfix.
+# Novo početno stanje (npr. nakon izmjene uputa na remote) postaviš pomicanjem taga:
+#   git tag -f pocetno-remote remote && git push -f origin pocetno-remote
 # Spojeni PR-ovi ostaju u povijesti na GitHubu — njih nije moguće obrisati.
 # Pokreni iz klona:  ./reset-radionica.sh
 set -euo pipefail

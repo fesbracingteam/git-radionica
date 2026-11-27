@@ -3,19 +3,19 @@
 
 /*
  * Popis svih tema u kvizu.
- * Upiši SVOJ red ispod oznake SVOG tima, u obliku:   &topic_p07,
+ * Osoba A upiše red SVOG PARA ispod oznake SVOG tima, u obliku:   &topic_p01,
  * (zarez na kraju je obavezan)
  */
 const Topic *const registry[] = {
     &topic_git_osnove,
 
-    /* ===== TIM A (P01–P05): dodaj svoj red ispod ove linije ===== */
+    /* ===== TIM A (parovi p01–p03): dodaj red ispod ove linije ===== */
 
-    /* ===== TIM B (P06–P10): dodaj svoj red ispod ove linije ===== */
+    /* ===== TIM B (parovi p04–p05): dodaj red ispod ove linije ===== */
 
-    /* ===== TIM C (P11–P15): dodaj svoj red ispod ove linije ===== */
+    /* ===== TIM C (parovi p06–p08): dodaj red ispod ove linije ===== */
 
-    /* ===== TIM D (P16–P19): dodaj svoj red ispod ove linije ===== */
+    /* ===== TIM D (par p09): dodaj red ispod ove linije ===== */
 
     NULL
 };
