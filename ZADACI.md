@@ -64,7 +64,7 @@ A napravi temu para i pošalje je na GitHub, B je preuzme i doda svoje pitanje, 
 ### Osoba A
 
 1. Kloniraj repozitorij, uđi u njegovu mapu i pokreni kviz da vidiš da radi.
-2. Napravi granu svog para `pPP-korak-1` i provjeri da si na njoj.
+2. Napravi granu za svog para `parNN-korak-1` i provjeri da si na njoj (NN označuje broj para npr. par 1 je p01).
 3. Kopiraj predložak `templates/tema.c` u `topics/pPP.c`. U kopiji zamijeni `pPP` brojem para, upiši naziv teme (obje teme para) i napiši jedno pitanje o svojoj temi.
 4. Pokreni kviz i odigraj temu svog para: pitanje se mora prikazati, a točan odgovor mora biti stvarno točan.
 5. Pogledaj stanje repozitorija: nova datoteka još nije praćena. Dodaj je i spremi commit s porukom „Dodaj pitanje”.
@@ -85,8 +85,6 @@ A napravi temu para i pošalje je na GitHub, B je preuzme i doda svoje pitanje, 
 6. Pogledaj stanje, dodaj promjenu i spremi commit s porukom „Dodaj pitanje osobe B”.
 7. Kroz Git obriši svoju staru datoteku `legacy/junk_NN.txt` (NN = tvoj osobni broj) i spremi commit.
 8. Pokreni provjeru kviza, pošalji granu na GitHub i javi osobi A.
-
-**Trojka p09:** P19 kreće s koracima 4–8 tek kad P18 pošalje svoje. Prije koraka 4 P19 preuzme najnovije stanje grane da ima i P18-ovo pitanje.
 
 ---
 
