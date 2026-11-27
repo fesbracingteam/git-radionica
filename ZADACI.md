@@ -1,6 +1,6 @@
 # Zadaci
 
-Radite u **parovima**. Svaki par ima broj od `p01` do `p09`, i jednu zajedničku granu `pPP-korak-1` (PP = broj para, npr. `p01-korak-1`).
+Radite u **parovima**. Svaki par ima broj od `p01` do `p09`, i jednu zajedničku granu `parPP-korak-1` (PP = broj para, npr. par p01 ima granu `par01-korak-1`).
 
 - **Osoba A** stvara: radi granu, piše, sprema commitove, šalje na GitHub, otvara i spaja PR-ove.
 - **Osoba B** preuzima i dopunjuje: dohvaća A-ov rad, prebacuje se na granu para, dodaje svoje, rebasea, cherry-picka i pregledava PR-ove.
@@ -64,7 +64,7 @@ A napravi temu para i pošalje je na GitHub, B je preuzme i doda svoje pitanje, 
 ### Osoba A
 
 1. Kloniraj repozitorij, uđi u njegovu mapu i pokreni kviz da vidiš da radi.
-2. Napravi granu za svog para `parNN-korak-1` i provjeri da si na njoj (NN označuje broj para npr. par 1 je p01).
+2. Napravi granu za svog para `parPP-korak-1` i provjeri da si na njoj (PP je broj para, npr. par p01 radi granu `par01-korak-1`).
 3. Kopiraj predložak `templates/tema.c` u `topics/pPP.c`. U kopiji zamijeni `pPP` brojem para, upiši naziv teme (obje teme para) i napiši jedno pitanje o svojoj temi.
 4. Pokreni kviz i odigraj temu svog para: pitanje se mora prikazati, a točan odgovor mora biti stvarno točan.
 5. Pogledaj stanje repozitorija: nova datoteka još nije praćena. Dodaj je i spremi commit s porukom „Dodaj pitanje”.
@@ -78,7 +78,7 @@ A napravi temu para i pošalje je na GitHub, B je preuzme i doda svoje pitanje, 
 ### Osoba B
 
 1. Kloniraj repozitorij, uđi u njegovu mapu i pokreni kviz da vidiš da radi.
-2. Pričekaj da ti A javi. Zatim dohvati novosti s GitHuba (bez spajanja) i pogledaj popis udaljenih grana — mora se vidjeti `origin/pPP-korak-1`.
+2. Pričekaj da ti A javi. Zatim dohvati novosti s GitHuba (bez spajanja) i pogledaj popis udaljenih grana — mora se vidjeti `origin/parPP-korak-1`.
 3. Prebaci se na granu svog para i pokreni kviz: tema para ima A-ovo pitanje.
 4. U `topics/pPP.c` dodaj svoje pitanje o svojoj temi kao novi element niza, ispod A-ovog pitanja.
 5. Pogledaj razliku (samo tvoje pitanje je novo) i pokreni kviz: tema mora imati oba pitanja.
@@ -137,8 +137,8 @@ A otvara i spaja PR-ove, B pregledava, a ako se pojavi konflikt, B ga rješava.
 ### Osoba A
 
 1. Prebaci se na granu para i preuzmi najnovije stanje. Otvori **PR #1**: grana para → `remote`. Na GitHubu pogledaj kako CI provjerava PR.
-2. Od grane para napravi granu `pPP-korak-2`. U `topics/pPP.c` dodaj treće pitanje i pokreni kviz da ga vidiš.
-3. Spremi commit, pošalji granu na GitHub i otvori **PR #2**: `pPP-korak-2` → `pPP-korak-1` (PR složen na PR). Javi osobi B.
+2. Od grane para napravi granu `parPP-korak-2`. U `topics/pPP.c` dodaj treće pitanje i pokreni kviz da ga vidiš.
+3. Spremi commit, pošalji granu na GitHub i otvori **PR #2**: `parPP-korak-2` → `parPP-korak-1` (PR složen na PR). Javi osobi B.
 
 ### Osoba B
 

@@ -26,8 +26,7 @@ A stvara (grana, commitovi, push, PR-ovi, merge), B preuzima (fetch, checkout, p
 
 - **Pull demo (25–35 min):** dok sudionici gledaju, na grani `remote` dodaj u `README.md` odjeljak „Pravila kviza” (npr. „Svako pitanje ima točno jedan točan odgovor.”), pa `git commit -am "Pravila kviza"` i `git push`. Sudionici: `git fetch`, `git status` (vide da je `origin/remote` ispred), `git pull`.
 - **Zaštita grane je ISKLJUČENA** cijeli dan 1, inače ne možeš gurnuti „Pravila kviza”.
-- **Trojka p09:** P19 dodaje svoje pitanje tek kad P18 pošalje svoje, inače dobiju konflikt već na dan 1.
-- **Kraj:** `git fetch && git branch -r` treba pokazati 9 grana `p01-korak-1` … `p09-korak-1`, svaka s commitovima obje osobe.
+- **Kraj:** `git fetch && git branch -r` treba pokazati 9 grana `par01-korak-1` … `par09-korak-1`, svaka s commitovima obje osobe.
 
 ## Prije dana 2
 

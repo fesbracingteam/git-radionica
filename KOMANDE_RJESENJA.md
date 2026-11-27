@@ -1,7 +1,7 @@
 # Naredbe — rješenja zadataka
 
 Isti koraci i brojevi kao u [ZADACI.md](ZADACI.md). Zamijeni:
-- `PP` brojem para (npr. `p01-korak-1`, `topics/p01.c`)
+- `PP` brojem para (npr. `par01-korak-1`, `topics/p01.c`)
 - `NN` svojim osobnim brojem (npr. `junk_07.txt`, `ID=07`)
 
 ---
@@ -16,7 +16,7 @@ Isti koraci i brojevi kao u [ZADACI.md](ZADACI.md). Zamijeni:
    make run
    ```
 2. ```bash
-   git checkout -b pPP-korak-1
+   git checkout -b parPP-korak-1
    git branch
    ```
 3. ```bash
@@ -51,7 +51,7 @@ Isti koraci i brojevi kao u [ZADACI.md](ZADACI.md). Zamijeni:
    `quiz` se ne vidi jer je upisan u `.gitignore`.
 10. ```bash
     git log
-    git push -u origin pPP-korak-1
+    git push -u origin parPP-korak-1
     ```
 11. ```bash
     git pull
@@ -71,7 +71,7 @@ Isti koraci i brojevi kao u [ZADACI.md](ZADACI.md). Zamijeni:
    git branch -r
    ```
 3. ```bash
-   git checkout pPP-korak-1
+   git checkout parPP-korak-1
    make run
    ```
 4. U `topics/pPP.c` dodaj novi element niza `pitanja` ispod A-ovog:
@@ -97,11 +97,6 @@ Isti koraci i brojevi kao u [ZADACI.md](ZADACI.md). Zamijeni:
    git push
    ```
 
-**Trojka p09, P19 prije koraka 4:**
-```bash
-git pull
-```
-
 ---
 
 ## Dan 2 — Zadatak 2a
@@ -109,7 +104,7 @@ git pull
 ### Oboje, na početku
 
 1. ```bash
-   git checkout pPP-korak-1
+   git checkout parPP-korak-1
    git pull
    ```
 2. ```bash
@@ -156,7 +151,7 @@ git pull
 ### Oboje, na kraju
 
 7. ```bash
-   git checkout pPP-korak-1
+   git checkout parPP-korak-1
    git branch -D pNN-pokus
    ```
 
@@ -184,7 +179,7 @@ git pull
    make run
    ```
 4. ```bash
-   git checkout pPP-korak-1
+   git checkout parPP-korak-1
    git branch -D pNN-oops
    ```
 
@@ -195,13 +190,13 @@ git pull
 ### Osoba A
 
 1. ```bash
-   git checkout pPP-korak-1
+   git checkout parPP-korak-1
    git pull
    gh pr create --base remote --fill
    gh pr checks
    ```
 2. ```bash
-   git switch -c pPP-korak-2
+   git switch -c parPP-korak-2
    ```
    Dodaj treće pitanje u `topics/pPP.c`, pa:
    ```bash
@@ -209,41 +204,41 @@ git pull
    ```
 3. ```bash
    git commit -am "Dodaj treće pitanje"
-   git push -u origin pPP-korak-2
-   gh pr create --base pPP-korak-1 --fill
+   git push -u origin parPP-korak-2
+   gh pr create --base parPP-korak-1 --fill
    ```
 
 ### Osoba B
 
 4. ```bash
    gh pr list
-   gh pr diff pPP-korak-1
-   gh pr checks pPP-korak-1
-   gh pr review pPP-korak-1 --approve
-   gh pr diff pPP-korak-2
-   gh pr review pPP-korak-2 --approve
+   gh pr diff parPP-korak-1
+   gh pr checks parPP-korak-1
+   gh pr review parPP-korak-1 --approve
+   gh pr diff parPP-korak-2
+   gh pr review parPP-korak-2 --approve
    ```
 
 ### Osoba A
 
 5. ```bash
-   gh pr merge pPP-korak-2 --merge
-   git checkout pPP-korak-1
+   gh pr merge parPP-korak-2 --merge
+   git checkout parPP-korak-1
    git pull
    make run
    ```
 6. ```bash
-   gh pr merge pPP-korak-1 --squash
+   gh pr merge parPP-korak-1 --squash
    ```
 7. Nakon što B riješi konflikt:
    ```bash
-   gh pr merge pPP-korak-1 --squash
+   gh pr merge parPP-korak-1 --squash
    ```
 
 ### Osoba B — samo ako je konflikt
 
 8. ```bash
-   git checkout pPP-korak-1
+   git checkout parPP-korak-1
    git pull
    ```
 9. ```bash

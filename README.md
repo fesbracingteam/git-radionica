@@ -33,7 +33,7 @@ Mali kviz u C-u na kojem vježbamo Git. Radimo u 9 parova (p01–p09): u svakom 
 - `remote` — glavna grana; na nju se ide samo preko PR-a
 - `develop`, `staging` — grane po okruženjima
 - `hotfix` — sadrži popravak koji ćemo cherry-pickati
-- `pPP-korak-1`, `pPP-korak-2` — grane tvog para (PP = broj para, npr. `p01-korak-1`)
+- `parPP-korak-1`, `parPP-korak-2` — grane tvog para (PP = broj para, npr. `par01-korak-1`)
 - `pNN-pokus`, `pNN-oops` — tvoje probne grane na dan 2 (NN = tvoj osobni broj), ne šalju se na GitHub
 
 ## Što gdje
