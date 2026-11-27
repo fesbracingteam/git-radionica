@@ -12,7 +12,7 @@ const Topic *const registry[] = {
     /* ===== TIM A (parovi p01–p03): dodaj red ispod ove linije ===== */
 
     /* ===== TIM B (parovi p04–p05): dodaj red ispod ove linije ===== */
-
+    &topic_p04
     /* ===== TIM C (parovi p06–p08): dodaj red ispod ove linije ===== */
 
     /* ===== TIM D (par p09): dodaj red ispod ove linije ===== */
