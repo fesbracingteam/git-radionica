@@ -1,62 +1,82 @@
-# Instalacija C prevoditelja (gcc) i `make`
+# Instalacija alata
 
-Za kviz trebaš C prevoditelj i `make`. Nađi svoj sustav i pokreni jednu naredbu.
+Za radionicu trebaš C prevoditelj (`gcc`), `make`, `git` i GitHub CLI (`gh`). Nađi svoj sustav i pokreni naredbe.
 
 ## macOS
 
 ```bash
-xcode-select --install
+xcode-select --install && brew install gh
 ```
 
-Dobiješ `gcc`, `make` i `git`. Na macOS-u je `gcc` zapravo `clang`, što je za radionicu u redu.
+Dobiješ `gcc`, `make`, `git` i `gh`. Na macOS-u je `gcc` zapravo `clang`, što je za radionicu u redu. Ako nemaš Homebrew, uputa je na https://brew.sh
 
 ## Linux
 
 | Distribucija | Naredba |
 |---|---|
-| Ubuntu, Debian, Linux Mint, Pop!_OS | `sudo apt update && sudo apt install -y build-essential` |
-| Fedora | `sudo dnf install -y gcc make` |
-| Arch, Manjaro | `sudo pacman -S --needed gcc make` |
-| openSUSE | `sudo zypper install -y gcc make` |
+| Ubuntu, Debian, Linux Mint, Pop!_OS | `sudo apt update && sudo apt install -y build-essential git gh` |
+| Fedora | `sudo dnf install -y gcc make git gh` |
+| Arch, Manjaro | `sudo pacman -S --needed gcc make git github-cli` |
+| openSUSE | `sudo zypper install -y gcc make git gh` |
+
+Ako tvoj sustav ne nađe paket `gh`, uputa je na https://github.com/cli/cli/blob/trunk/docs/install_linux.md
 
 ## Windows
 
-### WSL s Ubuntuom (preporučeno)
+Dvije mogućnosti. **WSL je jednostavniji**: sve radi kao na Linuxu i ništa ne trebaš dodavati u PATH.
 
-Skripta iz zadatka 2b i `make check` trebaju Unix ljusku, a WSL je ima. U PowerShellu pokrenutom kao administrator:
+### Mogućnost 1: WSL s Ubuntuom (preporučeno)
 
-```powershell
-wsl --install
-```
+1. U PowerShellu pokrenutom kao administrator:
+   ```powershell
+   wsl --install
+   ```
+2. Ponovno pokreni računalo i otvori aplikaciju **Ubuntu** (prvi put traži korisničko ime i lozinku za Linux).
+3. U Ubuntu terminalu:
+   ```bash
+   sudo apt update && sudo apt install -y build-essential git gh
+   ```
 
-Ponovno pokreni računalo i otvori aplikaciju **Ubuntu**. U njoj pokreni:
+Sve naredbe na radionici upisuješ u Ubuntu terminal. PATH se ne mijenja.
 
-```bash
-sudo apt update && sudo apt install -y build-essential
-```
+### Mogućnost 2: Windows bez WSL-a (MSYS2 + Git for Windows)
 
-Sve naredbe na radionici upisuješ u Ubuntu terminal.
+1. U PowerShellu instaliraj MSYS2, Git i GitHub CLI:
+   ```powershell
+   winget install -e --id MSYS2.MSYS2; winget install -e --id Git.Git; winget install -e --id GitHub.cli
+   ```
+   Git i `gh` se sami dodaju u PATH.
+2. Iz Start izbornika otvori **MSYS2 UCRT64** i instaliraj `gcc` i `make`:
+   ```bash
+   pacman -S --needed --noconfirm mingw-w64-ucrt-x86_64-gcc make
+   ```
+3. **Dodaj `gcc` i `make` u PATH.** MSYS2 ih stavlja u dvije mape koje Windows ne zna sam pronaći:
+   - `C:\msys64\ucrt64\bin` — ovdje je `gcc`
+   - `C:\msys64\usr\bin` — ovdje su `make` i `sh`
 
-### MSYS2 (ako WSL ne radi)
+   **Jednom naredbom** (PowerShell, bez administratora, mijenja samo PATH tvog korisnika):
+   ```powershell
+   [Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";C:\msys64\ucrt64\bin;C:\msys64\usr\bin", "User")
+   ```
 
-U PowerShellu:
+   **Ili ručno:**
+   1. Pritisni tipku Windows, upiši „varijable okruženja” i otvori **Uredi varijable okruženja za svoj račun**.
+   2. Pod „Korisničke varijable” odaberi **Path** i klikni **Uredi**.
+   3. Klikni **Novo** i upiši `C:\msys64\ucrt64\bin`, pa opet **Novo** i upiši `C:\msys64\usr\bin`.
+   4. Klikni **U redu** u oba prozora.
 
-```powershell
-winget install -e --id MSYS2.MSYS2
-```
-
-Otvori **MSYS2 UCRT64** iz Start izbornika i u njemu pokreni:
-
-```bash
-pacman -S --needed mingw-w64-ucrt-x86_64-gcc make
-```
-
-Na radionici radiš u terminalu MSYS2 UCRT64.
+   Ako si MSYS2 instalirao u drugu mapu, umjesto `C:\msys64` upiši tu mapu.
+4. **Zatvori sve terminale i otvori novi** — PATH se učitava samo kad se terminal pokrene.
+5. Na radionici radi u **Git Bashu** (dolazi s Gitom): ondje rade `git`, `gh`, `gcc`, `make` i skripta iz zadatka 2b.
 
 ## Provjera
 
+U terminalu u kojem ćeš raditi (macOS/Linux terminal, Ubuntu ili Git Bash):
+
 ```bash
-gcc --version && make --version
+gcc --version && cc --version && make --version && git --version && gh --version
 ```
 
-Ako obje naredbe ispišu verziju, sve je spremno. Zatim u kloniranom repozitoriju pokreni `make check`.
+Ako svih pet naredbi ispiše verziju, sve je spremno. Zatim u kloniranom repozitoriju pokreni `make check`.
+
+Ako na Windowsu piše `command not found`: provjeri mape u PATH-u (korak 3) i otvori novi terminal (korak 4). Ako radi `gcc`, a ne radi `cc`, umjesto `make check` pokreni `make CC=gcc check`.

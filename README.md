@@ -4,7 +4,7 @@ Mali kviz u C-u na kojem vježbamo Git. Radimo u 9 parova (p01–p09): u svakom 
 
 ## Prije radionice
 
-1. Instaliraj C prevoditelj i `make` prema [INSTALACIJA.md](INSTALACIJA.md), a Git i GitHub CLI (`gh`) prema [ZADACI.md → Prije radionice](ZADACI.md#prije-radionice-oboje-kod-kuće).
+1. Instaliraj C prevoditelj (`gcc`), `make`, Git i GitHub CLI (`gh`) prema [INSTALACIJA.md](INSTALACIJA.md).
 2. Postavi ime i e-mail:
    ```bash
    git config --global user.name "Ime Prezime"
@@ -48,7 +48,7 @@ scenarios/oops.sh           zadatak 2b
 cards/PNN.md                tvoja kartica
 ZADACI.md                   što treba napraviti, po ulogama A i B
 KOMANDE_RJESENJA.md         naredbe koje rješavaju svaki korak
-INSTALACIJA.md              instalacija gcc i make na svim sustavima
+INSTALACIJA.md              instalacija gcc, make, git i gh na svim sustavima (i PATH na Windowsu)
 ```
 
 Zadaci su u [ZADACI.md](ZADACI.md), a rješenja u [KOMANDE_RJESENJA.md](KOMANDE_RJESENJA.md).

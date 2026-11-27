@@ -16,7 +16,7 @@ Ovdje piše **što** treba napraviti. Naredbe koje to rješavaju su u [KOMANDE_R
 
 ## Prije radionice (oboje, kod kuće)
 
-Trebaju ti Git, GitHub CLI (`gh`), C prevoditelj i `make`. Naredbe za instalaciju `gcc` i `make` na svim sustavima (i drugim Linux distribucijama) su u [INSTALACIJA.md](INSTALACIJA.md).
+Trebaju ti Git, GitHub CLI (`gh`), C prevoditelj i `make`. Naredbe za instalaciju svih alata na svim sustavima (i druge Linux distribucije te Windows bez WSL-a, s dodavanjem u PATH) su u [INSTALACIJA.md](INSTALACIJA.md).
 
 **macOS** — Xcode Command Line Tools daju `clang`, `make` i `git`; `gh` instaliraj preko Homebrewa:
 ```bash
