@@ -1,1 +1,0 @@
-stara datoteka sudionika P06 — obriši me s git rm
