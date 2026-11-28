@@ -11,7 +11,9 @@
 
 static const Question pitanja[] = {
     {"Koja je prva igra vezana za svemir ?",
-     {"Star Citizen odgovor A", "Spacewar! odgovor B", "Starfield odgovor C", "No man's sky odgovor D"}, 1},
+    {"Star Citizen odgovor A", "Spacewar! odgovor B", "Starfield odgovor C", "No man's sky odgovor D"}, 1},
+    {"Koja svemirska igra ima 1:1 velicinu mlijecnog sustava ?",
+    {"No man's sky odgovor A","Starfield odgovor B", "Elite Dangerous odgovor C", "Eve Online odgovor D"}, 2}
 };
 
 const Topic topic_p04 = {"p04", "Igre / Svemir", pitanja, BROJ(pitanja)};
