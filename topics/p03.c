@@ -12,6 +12,8 @@
 static const Question pitanja[] = {
     {"Tko je glavni glumac filma Scarface?",
      {"Anthony Hopkins", "Al Pacino", "Chris Rock", "Kevin Hart"}, 1},
+    {"Tko je osvojio Grammy za album godine 2026.?",
+     {"Kendrick Lamar", "Lady Gaga", "Bad Bunny", "Sabrina Carpenter"}, 2},
 };
 
 const Topic topic_p03 = {"p03", "Filmovi / Glazba", pitanja, BROJ(pitanja)};
