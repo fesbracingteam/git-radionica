@@ -10,6 +10,7 @@ const Topic *const registry[] = {
     &topic_git_osnove,
 
     /* ===== TIM A (parovi p01–p03): dodaj red ispod ove linije ===== */
+    /*par02*/
 
     /* ===== TIM B (parovi p04–p05): dodaj red ispod ove linije ===== */
 
